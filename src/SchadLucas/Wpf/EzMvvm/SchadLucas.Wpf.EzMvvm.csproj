@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{098AA725-E8F5-44A7-9DBF-4E24B23F11D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchadLucas.Wpf.EzMvvm</RootNamespace>
+    <AssemblyName>SchadLucas.Wpf.EzMvvm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations, Version=11.1.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\JetBrains.Annotations.11.1.0\lib\net20\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NLog.4.5.6\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyCache.cs" />
+    <Compile Include="Commands\EzCommand.cs" />
+    <Compile Include="Commands\Generic\EzCommand.cs" />
+    <Compile Include="Context\ObservableObject.cs">
+      <DependentUpon>IObservableObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ViewModel.cs">
+      <DependentUpon>IViewModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\EzLogger.cs">
+      <DependentUpon>IEzLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EzMvvmModule.cs" />
+    <Compile Include="IWindow.cs" />
+    <Compile Include="Logging\AppLoggingConfiguration.cs" />
+    <Compile Include="Core\EzBootstrapper.cs" />
+    <Compile Include="Logging\EzLogger.Error.cs">
+      <DependentUpon>IEzLogger.Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\EzLogger.Fatal.cs">
+      <DependentUpon>IEzLogger.Fatal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\EzLogger.Info.cs">
+      <DependentUpon>IEzLogger.Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\EzLogger.Trace.cs">
+      <DependentUpon>IEzLogger.Trace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\EzLogger.Warn.cs">
+      <DependentUpon>IEzLogger.Warn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\EzNLogModule.cs" />
+    <Compile Include="Context\IDataContextObject.cs" />
+    <Compile Include="Context\IObservableObject.cs" />
+    <Compile Include="Logging\IEzLogger.cs" />
+    <Compile Include="Logging\IEzLogger.Debug.cs">
+      <DependentUpon>IEzLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\IEzLogger.Error.cs">
+      <DependentUpon>IEzLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\IEzLogger.Fatal.cs">
+      <DependentUpon>IEzLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\IEzLogger.Info.cs">
+      <DependentUpon>IEzLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\IEzLogger.Trace.cs">
+      <DependentUpon>IEzLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logging\IEzLogger.Warn.cs">
+      <DependentUpon>IEzLogger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sections\ISection.cs" />
+    <Compile Include="Sections\SectionManager.cs">
+      <DependentUpon>ISectionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\IMessageHub.cs" />
+    <Compile Include="Sections\ISectionBuilder.cs" />
+    <Compile Include="Sections\ISectionManager.cs" />
+    <Compile Include="Services\IService.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="Context\IViewModel.cs" />
+    <Compile Include="Sections\Section.xaml.cs">
+      <DependentUpon>Section.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\SectionBase.cs" />
+    <Compile Include="Services\MessageHub.cs">
+      <DependentUpon>IMessageHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\MessageHubErrorEventArgs.cs">
+      <DependentUpon>IMessageHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sections\SectionBuilder.cs">
+      <DependentUpon>ISectionBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Subscription.cs">
+      <DependentUpon>IMessageHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Subscriptions.cs">
+      <DependentUpon>IMessageHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\ViewModelBinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Compile Include="Logging\EzLogger.Debug.cs">
+      <DependentUpon>IEzLogger.Debug.cs</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilities\SchadLucas.Utilities.csproj">
+      <Project>{8D95F2C1-5162-4ACE-8477-7442CB6BC562}</Project>
+      <Name>SchadLucas.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Converters\SchadLucas.Wpf.Converters.csproj">
+      <Project>{67f45ffa-7a2c-4352-8b67-cb9958a00e81}</Project>
+      <Name>SchadLucas.Wpf.Converters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\SchadLucas.Wpf.Utilities.csproj">
+      <Project>{5410d711-cceb-4244-b5ff-a0788afac212}</Project>
+      <Name>SchadLucas.Wpf.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Sections\Section.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <NuVer>1.0.$([System.DateTime]::Now.ToString(`yMd.HHms`))</NuVer>
+    <PostBuildEvent>
+	    nuget pack "$(ProjectPath)" -version "$(NuVer)" -OutputDirectory "C:\Users\LSC\source\NuGet_Feed" -Properties "id=schadlucas.wpf.ezmvvm,;authors=LucasSchad;title=EzMvvm"
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

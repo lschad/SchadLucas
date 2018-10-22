@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vis="clr-namespace:SchadLucas.Wpf.Converters.Visibility">
+
+    <vis:BooleanToVisibility x:Key="Converter.Visibility.Boolean" />
+    <vis:NegativeBooleanToVisibility x:Key="Converter.Visibility.NegativeBoolen" />
+    <vis:NullToVisibility x:Key="Converter.Visibility.Null" />
+    <vis:NotNullToVisibility x:Key="Converter.Visibility.NotNull" />
+
+</ResourceDictionary>

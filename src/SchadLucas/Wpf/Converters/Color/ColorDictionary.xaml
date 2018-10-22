@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:color="clr-namespace:SchadLucas.Wpf.Converters.Color">
+
+    <color:Brightness x:Key="Converter.Color.Brightness" />
+    <color:ColorToSolidColorBrush x:Key="Converter.Color.ToBrush" />
+
+</ResourceDictionary>

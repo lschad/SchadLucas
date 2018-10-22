@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SchadLucas.Wpf.Converters">
+
+   <ResourceDictionary.MergedDictionaries>
+       <ResourceDictionary Source="Boolean/BooleanDictionary.xaml" />
+       <ResourceDictionary Source="Color/ColorDictionary.xaml" />
+       <ResourceDictionary Source="Math/MathDictionary.xaml" />
+       <ResourceDictionary Source="String/StringDictionary.xaml" />
+       <ResourceDictionary Source="Types/TypeDictionary.xaml" />
+       <ResourceDictionary Source="Visibility/VisibilityDictionary.xaml" />
+       
+       <ResourceDictionary>
+           <local:ValueConverterSequence x:Key="Converter.Sequence" />
+       </ResourceDictionary>
+   </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:boolean="clr-namespace:SchadLucas.Wpf.Converters.Boolean">
+
+    <boolean:NegateBoolean x:Key="Converter.C.Negate" />
+    <boolean:NotNullToBoolean x:Key="Converter.Boolean.NotNull" />
+    <boolean:NullToBoolean x:Key="Converter.Boolean.Null" />
+
+</ResourceDictionary>

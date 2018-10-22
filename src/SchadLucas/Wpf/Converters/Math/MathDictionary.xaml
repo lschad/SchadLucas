@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:math="clr-namespace:SchadLucas.Wpf.Converters.Math">
+
+    <math:Add x:Key="Converter.Math.Add" />
+    <math:Sub x:Key="Converter.Math.Sub" />
+    <math:Div x:Key="Converter.Math.Div" />
+    <math:Mul x:Key="Converter.Math.Mul" />
+    <math:Sqrt x:Key="Converter.Math.Sqrt" />
+
+</ResourceDictionary>
